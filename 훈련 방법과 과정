@@ -1,24 +1,24 @@
 #1.이미지 생성(남자와 여자의데이터 100개씩을 생성하였지만 표본이 모자르기 때문에 기존데이터에 약간의 변화를준 새로운 데이터 생성)
-from keras.preprocessing.image import ImageDataGenerator
-datagen = ImageDataGenerator(
-                            rescale=1./255,
-                            zoom_range = [0.8,2.0],
-                            shear_range=0.5,
-                            rotation_range=15,
-                            horizontal_flip=True,
-                            vertical_flip=True,
-                            height_shift_range=0.1,
-                            width_shift_range=0.1,
-                            fill_mode = 'nearest')
-
-
-for i in range(images.shape[0]):
-    i=0
-    for batch in datagen.flow(images,batch_size=1,save_to_dir='D:\\man&women\\imgen_woman',save_prefix='1',save_format='jpg'):
-        i += 1
-        if i >10:
-            break
-
+#from keras.preprocessing.image import ImageDataGenerator
+#datagen = ImageDataGenerator(
+#                            rescale=1./255,
+#                            zoom_range = [0.8,2.0],
+#                            shear_range=0.5,
+#                            rotation_range=15,
+#                            horizontal_flip=True,
+#                            vertical_flip=True,
+#                            height_shift_range=0.1,
+#                            width_shift_range=0.1,
+#                            fill_mode = 'nearest')
+#
+#
+#for i in range(images.shape[0]):
+#    i=0
+#    for batch in datagen.flow(images,batch_size=1,save_to_dir='D:\\man&women\\imgen_woman',save_prefix='1',save_format='jpg'):
+#        i += 1
+#        if i >10:
+#            break
+#
 
 
 #2. 경로설정(자신의파일이있는곳을 설정해줘야함)
